@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins&family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, red, blue);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #eceaeb;
+    animation: glow 1000ms infinite alternate;
+    font-family: 'Righteous', cursive;
+    ;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgb(245, 120, 120),
+            0 0 20px goldenrod,
+            0 0 30px gold;
+
+    }
+
+    to {
+        text-shadow: 0 0 10px palevioletred,
+            0 0 10px violet,
+            0 0 10px purple;
+
+    }
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(221, 252, 250);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: aqua;
+    color: blue;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Righteous', cursive;
+
+
+}
+
+button:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 10px cyan,
+        0 0 100px cyan;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    border-radius: 50%;
+}
+
+@media (max-width:468px) {
+    button {
+        padding: 16px 35px;
+        position: relative;
+        right: 2px;
+    }
+
+}
+
+@media (min-width:360px) and (max-width:436px) {
+    button {
+        padding: 16px 35px;
+        position: relative;
+        right: 30px;
+    }
+}
+@media (max-width:408px) {
+    button {
+        padding: 16px 35px;
+        position: relative;
+        right: 60px;
+    }
+}
+
+
+@media (max-width:378px) {
+    button {
+        padding: 16px 35px;
+        position: relative;
+        right: 90px;
+    }
+}
+@media (max-width:348px) {
+    button {
+        padding: 16px 35px;
+        position: relative;
+        right: 120px;
+    }
+}
